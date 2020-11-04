@@ -1,11 +1,14 @@
-package learn.spring.sfgdi.services;
+package guru.springframework.sfgdi.services;
 
 import org.springframework.stereotype.Service;
 
-@Service // makes this available for injection as a spring component
+/**
+ * Created by jt on 12/26/19.
+ */
+@Service
 public class ConstructorGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello World! - Constructor";
+        return "Hello World - Constructor";
     }
 }

@@ -1,15 +1,18 @@
-package learn.spring.sfgdi.controllers;
+package guru.springframework.sfgdi.controllers;
 
-import learn.spring.sfgdi.services.GreetingService;
+import guru.springframework.sfgdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-@Controller // creates this class as a bean in the context
+/**
+ * Created by jt on 12/26/19.
+ */
+@Controller
 public class PropertyInjectedController {
 
-    @Qualifier("propertyGreetingService")
-    @Autowired // tells the controller to inject a greetingService
+    @Qualifier("propertyInjectedGreetingService")
+    @Autowired
     public GreetingService greetingService;
 
     public String getGreeting(){
@@ -17,4 +20,3 @@ public class PropertyInjectedController {
     }
 
 }
-
